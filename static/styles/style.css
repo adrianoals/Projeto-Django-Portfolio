@@ -1,0 +1,76 @@
+body {
+    background-color: #F3F3F3;
+}
+
+h1 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.font_subtitle {
+    font-family: 'Kanit', sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.font_text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+
+@media (max-width: 766px) {
+    /* Classe que define o texto p/ centralizar a partir de uma tela de largura de 766px */
+    .custom-center {
+        text-align: center;
+    }
+    /* Classe que define o a imagem p/ centralizar a partir de uma tela largura de 766px */
+    .custom-img-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 766px) {
+    .button-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+/* Definindo tamanho dos botões */
+.w-140 {
+    width: 120px !important;
+}
+
+.h-140 {
+    height: 120px !important;
+}
+
+/* Definindo cores dos Botões */
+.btn-yellow {
+    background-color: #EEA302;
+    color: black; /* Cor do texto */
+}
+
+.btn-red {
+    background-color: #FF3B25;
+    color: white; /* Cor do texto */
+}
+
+.btn-blue {
+    background-color: #80D8DA;
+    color: white; /* Cor do texto */
+}
+
+
+/* Mudando a cor ao clicar no índice */
+.nav-link:active {
+    color: #FF0000; /* Substitua por qualquer cor que você quiser */
+}
+
