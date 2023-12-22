@@ -40,7 +40,7 @@
                     <div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <!-- Adicione os itens do carrossel aqui -->
-                            {% if card %}
+                            {% if cards %}
                             {% for projeto in cards %}
                             <div class="carousel-item active" data-bs-interval="2000">
                                 <img src="{% static '/Assets/images/projects/webapi/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
@@ -53,7 +53,7 @@
                             {% else %}
                             {% endif %}
 
-                            <!-- Projeto 2 -->
+                            {% comment %} <!-- Projeto 2 -->
                             <div class="carousel-item" data-bs-interval="2000">
                                 <img src="/Assets/images/showImg/fullDev.jpg" class="img-fluid" alt="">
                                 <div class="carousel-caption">
@@ -70,7 +70,7 @@
                                     <p>Lorem ipsum, dolor sit</p>
                                 </div>
                                 
-                            </div>                        
+                            </div>                         {% endcomment %}
                             <!-- Botões Setas -->
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon"></span>
