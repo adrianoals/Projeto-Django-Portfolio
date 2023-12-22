@@ -2,7 +2,91 @@
 {% load static %}
 
 {% block content %}
+        <div class="row align-items-center">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-5">
+                <h1 class="featurette-heading fw-normal lh-1 custom-center text-md-start">Meus Projetos</h1>
+                <h5 class="mt-5 custom-center text-md-start font_subtitle">Lorem ipsum dolor sit</h5>
+                <p class="custom-center text-md-start font_text">
+                    Sou um parágrafo. Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam quia autem nulla deleniti fugit a! Inventore, quibusdam ad! Ipsum esse saepe adipisci hic? Obcaecati quo consequatur, ab ipsam modi dolore!
+                </p>
+                <div class="button-container ms-2 me-2 mb-5 d-flex flex-nowrap justify-content-center">
+                    <a href="#web-api"><button class="btn mt-4 me-3 btn-yellow font_subtitle text-dark">Web/API</button></a>
+                    <a href="#automacoes"><button class="btn mt-4 me-3 btn-red font_subtitle text-dark">Automações</button></a>
+                    <a href="#mobile"><button class="btn mt-4 me-3 btn-blue font_subtitle text-dark">Mobile</button></a>
+                </div>
+                
+            </div>
+            
+            <div class="col-md-4">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image custom-img-center w-100 h-100 img-cover" src="{% static '/Assets/images/principal/fullDev.jpg' %}" alt="">
+            </div>
 
+        </div>
+
+        <hr class="featurette-divider">
+    
+        <!-- Seção 1 -->
+        <div class="container mt-5 mb-5" id="web-api">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="featurette-heading fw-normal lh-1 custom-center text-md-start">Web / API</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut eaque architecto adipisci tenetur excepturi ab libero voluptates molestias, voluptatum beatae iste eos praesentium quisquam, placeat pariatur, provident nemo. Aliquid?</p>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Adicione os itens do carrossel aqui -->
+                            {% if card %}
+                            {% for projeto in cards %}
+                            <div class="carousel-item active" data-bs-interval="2000">
+                                <img src="{% static '/Assets/images/projects/webapi/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
+                                <div class="carousel-caption">
+                                    <h5>{{ projeto.nome }}</h5>
+                                    <a href="{{ projeto.nome }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            {% endif %}
+
+                            <!-- Projeto 2 -->
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="/Assets/images/showImg/fullDev.jpg" class="img-fluid" alt="">
+                                <div class="carousel-caption">
+                                    <h5>Title 1</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quod exercitationem minima ut suscipit itaque eos sit? Ipsam dolorem maiores at autem nam obcaecati, omnis fugit voluptatem, magnam quos asperiores!</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Projeto 3 -->
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="/Assets/imagens/siteportfolio2.png" class="img-fluid"  alt="">
+                                <div class="carousel-caption">
+                                    <h5>Lorem ipsum dolor </h5>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                </div>
+                                
+                            </div>                        
+                            <!-- Botões Setas -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /END THE FEATURETTES -->
+        <hr class="featurette-divider">
 
         
 {% endblock %}

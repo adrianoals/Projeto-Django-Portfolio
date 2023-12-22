@@ -2,19 +2,16 @@
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
                 <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                    <img src="{% static '/assets/images/principal/logo.svg' %}" class="bi me-2" width="40" height="32" alt="">
                     <span class="fs-4">Adriano Lima</span>
                     <span class="fs-4">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                     <span class="fs-4">Desenvolvedor</span>
                 </div>
-                
                 <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="{% url 'index' %}" class="nav-link text-dark" aria-current="page">Home</a>
-                    </li>
-                    <li class="nav-item"><a href="{% url 'projeto' %}" class="nav-link text-dark">Projetos</a>
-                    </li>
-                    <li class="nav-item"><a href="{% url 'contato' %}" class="nav-link text-dark">Contato</a>
-                    </li>
+                    <li class="nav-item"><a href="{% url 'index' %}" class="nav-link" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'projeto' %}" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="{% url 'contato' %}" class="nav-link">Contato</a></li>
                 </ul>
+                
             </header>
         </div>

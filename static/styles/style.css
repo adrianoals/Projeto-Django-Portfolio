@@ -1,5 +1,6 @@
 body {
     background-color: #F3F3F3;
+
 }
 
 h1 {
@@ -42,7 +43,6 @@ h1 {
 }
 
 
-
 /* Definindo tamanho dos botões */
 .w-140 {
     width: 120px !important;
@@ -50,6 +50,17 @@ h1 {
 
 .h-140 {
     height: 120px !important;
+}
+
+
+.wh-40 {
+    height: 50px !important;
+    width: 100px !important; 
+}
+
+.wh-100 {
+    height: 120px !important;
+    width: 120px !important; 
 }
 
 /* Definindo cores dos Botões */
@@ -68,9 +79,74 @@ h1 {
     color: white; /* Cor do texto */
 }
 
+.btn-yellow:hover, .btn-red:hover, .btn-blue:hover {
+    border: 2px solid black; /* Define a espessura e a cor da borda */
+    /* color: black; Cor do texto */
+}
+
+.btn-yellow:hover {
+    background-color: #EEA302; /* Mesma cor de fundo que o .btn-yellow normal */
+}
+
+.btn-red:hover {
+    background-color: #FF3B25; /* Mesma cor de fundo que o .btn-red normal */
+}
+
+.btn-blue:hover {
+    background-color: #80D8DA; /* Mesma cor de fundo que o .btn-blue normal */
+}
+
+
 
 /* Mudando a cor ao clicar no índice */
 .nav-link:active {
-    color: #FF0000; /* Substitua por qualquer cor que você quiser */
+    color:#80D8DA; /* Substitua por qualquer cor que você quiser */
 }
+
+
+/* Definindo cores das setas*/
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}    */
+
+
+.carousel-item img {
+    object-fit: cover;
+    /* object-fit: contain; */
+    /* width: 90%; */
+    /* height: 70vh; */
+
+    width: 630px;
+    height: 450px;
+    
+    
+    display: block;
+    border: 1px solid #000; /* Cor e largura da borda desejada */
+    border-radius: 10px; /* Opcional: Adiciona bordas arredondadas */
+    margin: 0 0 0;
+}
+
+
+
+
+/* Estilo padrão para os links */
+.nav-link {
+    color: #000;
+}
+
+/* Estilo ao passar o mouse */
+/* .nav-link:hover {
+    color:#3535cd 
+} */
+
+/* Estilo ao clicar */
+/* .nav-link:active {
+    color: #0000ff; 
+}  */
+
+
+
+
+
 
