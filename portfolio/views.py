@@ -6,7 +6,7 @@ def index(request):
 
 def projeto(request):
         projetos = ProjetoWebAPI.objects.all()
-        return render(request, 'portfolio/projeto.html', {"cards": projetos})
+        return render(request, 'portfolio/projeto.html', {"projetos": projetos})
 
 def contato(request):
         return render(request, 'portfolio/contato.html')

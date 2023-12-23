@@ -40,18 +40,35 @@
                     <div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <!-- Adicione os itens do carrossel aqui -->
-                            {% if cards %}
-                            {% for projeto in cards %}
+                            {% if projetos %}
+                            {% for projeto in projetos %}
                             <div class="carousel-item active" data-bs-interval="2000">
                                 <img src="{% static '/Assets/images/projects/webapi/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
                                 <div class="carousel-caption">
                                     <h5>{{ projeto.nome }}</h5>
-                                    <a href="{{ projeto.nome }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
+                                    <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
                                 </div>
                             </div>
                             {% endfor %}
                             {% else %}
                             {% endif %}
+
+                            <div class="carousel-inner">
+                            <!-- Adicione os itens do carrossel aqui -->
+                                {% if projetos %}
+                                {% for projeto in projetos %}
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="2000">
+                                    <img src="{% static '/Assets/images/projects/webapi/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
+                                    <div class="carousel-caption">
+                                        <h5>{{ projeto.nome }}</h5>
+                                        <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                {% else %}
+                                {% endif %}
+                            </div>
+                            
 
                             {% comment %} <!-- Projeto 2 -->
                             <div class="carousel-item" data-bs-interval="2000">
