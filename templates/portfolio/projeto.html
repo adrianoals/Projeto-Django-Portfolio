@@ -38,7 +38,7 @@
     
                 <div class="col-md-6">
                     <div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel">
-                        <div class="carousel-inner">
+                        {% comment %} <div class="carousel-inner">
                             <!-- Adicione os itens do carrossel aqui -->
                             {% if projetos %}
                             {% for projeto in projetos %}
@@ -51,13 +51,13 @@
                             </div>
                             {% endfor %}
                             {% else %}
-                            {% endif %}
+                            {% endif %} {% endcomment %}
 
                             <div class="carousel-inner">
                             <!-- Adicione os itens do carrossel aqui -->
                                 {% if projetos %}
                                 {% for projeto in projetos %}
-                                <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="2000">
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
                                     <img src="{% static '/Assets/images/projects/webapi/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
                                     <div class="carousel-caption">
                                         <h5>{{ projeto.nome }}</h5>
