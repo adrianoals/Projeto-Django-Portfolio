@@ -112,6 +112,48 @@
         <!-- /END THE FEATURETTES -->
         <hr class="featurette-divider">
 
+        <!-- Seção 3 -->
+        <div class="container mt-5 mb-5" id="automacoes">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1 custom-center text-md-start">Mobile</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut eaque architecto adipisci tenetur excepturi ab libero voluptates molestias, voluptatum beatae iste eos praesentium quisquam, placeat pariatur, provident nemo. Aliquid?</p>
+                </div>
+    
+                <div class="col-md-6 order-md-1">
+                    <div class="carousel slide" id="carouselMobile" data-bs-wrap="true" data-bs-ride="carousel">    
+                        <!-- itens do carrossel aqui -->
+                        <div class="carousel-inner">
+                            {% if projetos_automacoes %}
+                            {% for projeto in projetos_automacoes %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
+                                <img src="{% static '/Assets/images/projects/automacoes/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
+                                <div class="carousel-caption">
+                                    <h5>{{ projeto.nome }}</h5>
+                                    <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            {% endif %}
+                        </div>
+                        <div>
+                            <!-- Botões Setas -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMobile" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselMobile" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /END THE FEATURETTES -->
+        <hr class="featurette-divider">
+
         
 {% endblock %}
 
