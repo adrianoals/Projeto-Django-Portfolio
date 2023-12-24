@@ -5,6 +5,7 @@ certifi==2023.11.17
 deprecation==2.1.0
 Django==4.2.7
 gotrue==2.1.0
+gunicorn==21.2.0
 h11==0.14.0
 httpcore==0.17.3
 httpx==0.24.1
