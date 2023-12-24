@@ -37,12 +37,12 @@
                 </div>
     
                 <div class="col-md-6">
-                    <div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel">
-                        {% comment %} <div class="carousel-inner">
-                            <!-- Adicione os itens do carrossel aqui -->
-                            {% if projetos %}
-                            {% for projeto in projetos %}
-                            <div class="carousel-item active" data-bs-interval="2000">
+                    <div class="carousel slide" id="carouselWebApi" data-bs-wrap="true" data-bs-ride="carousel">    
+                        <!-- itens do carrossel aqui -->
+                        <div class="carousel-inner">
+                            {% if projetos_web_api %}
+                            {% for projeto in projetos_web_api %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
                                 <img src="{% static '/Assets/images/projects/webapi/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
                                 <div class="carousel-caption">
                                     <h5>{{ projeto.nome }}</h5>
@@ -51,51 +51,58 @@
                             </div>
                             {% endfor %}
                             {% else %}
-                            {% endif %} {% endcomment %}
-
-                            <div class="carousel-inner">
-                            <!-- Adicione os itens do carrossel aqui -->
-                                {% if projetos %}
-                                {% for projeto in projetos %}
-                                <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
-                                    <img src="{% static '/Assets/images/projects/webapi/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
-                                    <div class="carousel-caption">
-                                        <h5>{{ projeto.nome }}</h5>
-                                        <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
-                                    </div>
-                                </div>
-                                {% endfor %}
-                                {% else %}
-                                {% endif %}
-                            </div>
-                            
-
-                            {% comment %} <!-- Projeto 2 -->
-                            <div class="carousel-item" data-bs-interval="2000">
-                                <img src="/Assets/images/showImg/fullDev.jpg" class="img-fluid" alt="">
-                                <div class="carousel-caption">
-                                    <h5>Title 1</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quod exercitationem minima ut suscipit itaque eos sit? Ipsam dolorem maiores at autem nam obcaecati, omnis fugit voluptatem, magnam quos asperiores!</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Projeto 3 -->
-                            <div class="carousel-item" data-bs-interval="2000">
-                                <img src="/Assets/imagens/siteportfolio2.png" class="img-fluid"  alt="">
-                                <div class="carousel-caption">
-                                    <h5>Lorem ipsum dolor </h5>
-                                    <p>Lorem ipsum, dolor sit</p>
-                                </div>
-                                
-                            </div>                         {% endcomment %}
+                            {% endif %}
+                        </div>
+                        <div>
                             <!-- Botões Setas -->
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselWebApi" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon"></span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselWebApi" data-bs-slide="next">
                                 <span class="carousel-control-next-icon"></span>
                             </button>
-                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /END THE FEATURETTES -->
+        <hr class="featurette-divider">
+
+        <!-- Seção 2 -->
+        <div class="container mt-5 mb-5" id="automacoes">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1 custom-center text-md-start">Automações / Scraping</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut eaque architecto adipisci tenetur excepturi ab libero voluptates molestias, voluptatum beatae iste eos praesentium quisquam, placeat pariatur, provident nemo. Aliquid?</p>
+                </div>
+    
+                <div class="col-md-6 order-md-1">
+                    <div class="carousel slide" id="carouselAutomacoes" data-bs-wrap="true" data-bs-ride="carousel">    
+                        <!-- itens do carrossel aqui -->
+                        <div class="carousel-inner">
+                            {% if projetos_automacoes %}
+                            {% for projeto in projetos_automacoes %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
+                                <img src="{% static '/Assets/images/projects/automacoes/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
+                                <div class="carousel-caption">
+                                    <h5>{{ projeto.nome }}</h5>
+                                    <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            {% endif %}
+                        </div>
+                        <div>
+                            <!-- Botões Setas -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutomacoes" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAutomacoes" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
