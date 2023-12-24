@@ -124,10 +124,10 @@
                     <div class="carousel slide" id="carouselMobile" data-bs-wrap="true" data-bs-ride="carousel">    
                         <!-- itens do carrossel aqui -->
                         <div class="carousel-inner">
-                            {% if projetos_automacoes %}
-                            {% for projeto in projetos_automacoes %}
+                            {% if projetos_mobile %}
+                            {% for projeto in projetos_mobile %}
                             <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
-                                <img src="{% static '/Assets/images/projects/automacoes/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
+                                <img src="{% static '/Assets/images/projects/mobile/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
                                 <div class="carousel-caption">
                                     <h5>{{ projeto.nome }}</h5>
                                     <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
