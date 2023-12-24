@@ -23,34 +23,49 @@
             </div>
 
             {% comment %} <div class="col-md-6">
-                <form class="mx-5 my-5">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="name" placeholder="Seu nome">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Assunto</label>
-                        <input type="text" class="form-control" id="subject" placeholder="Assunto">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Mensagem</label>
-                        <textarea class="form-control" id="message" rows="3"></textarea>
-                    </div>
+                <form method="post" class="mx-5 my-5">
+                    {% csrf_token %}
+                    {{ form.as_p }}
                     <button type="submit" class="btn rounded-circle btn-yellow text-dark wh-100 font_subtitle ">Enviar</button>
                 </form>
             </div> {% endcomment %}
 
+            {% comment %} <div class="col-md-6">
+                <!-- Adicione este bloco para exibir mensagens -->
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <!-- Fim do bloco de mensagens -->
+            
+                <form method="post" class="mx-5 my-5">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn rounded-circle btn-yellow text-dark wh-100 font_subtitle ">Enviar</button>
+                </form>
+            </div> {% endcomment %}
+            
             <div class="col-md-6">
+                <!-- Adicione este bloco para exibir mensagens -->
+                {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                    <h5{% if message.tags %} class="{{ message.tags }} mt-5"{% endif %}>{{ message }}</h5>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <!-- Fim do bloco de mensagens -->
+            
                 <form method="post" class="mx-5 my-5">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button type="submit" class="btn rounded-circle btn-yellow text-dark wh-100 font_subtitle ">Enviar</button>
                 </form>
             </div>
+            
 
             <div class="col-md-3">
             </div>
