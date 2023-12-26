@@ -21,7 +21,7 @@
             </div>
             
             <div class="col-md-4">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image custom-img-center w-100 h-100 img-cover" src="{% static '/Assets/images/principal/fullDev.jpg' %}" alt="">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image custom-img-center w-100 h-100 img-cover" src="{% static '/assets/images/principal/fullDev.jpg' %}" alt="">
             </div>
 
         </div>
@@ -43,7 +43,7 @@
                             {% if projetos_web_api %}
                             {% for projeto in projetos_web_api %}
                             <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
-                                <img src="{% static '/Assets/images/projects/webapi/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
+                                <img src="{% static '/assets/images/projects/webapi/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
                                 <div class="carousel-caption">
                                     <h5>{{ projeto.nome }}</h5>
                                     <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
@@ -85,7 +85,7 @@
                             {% if projetos_automacoes %}
                             {% for projeto in projetos_automacoes %}
                             <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
-                                <img src="{% static '/Assets/images/projects/automacoes/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
+                                <img src="{% static '/assets/images/projects/automacoes/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
                                 <div class="carousel-caption">
                                     <h5>{{ projeto.nome }}</h5>
                                     <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
@@ -127,7 +127,7 @@
                             {% if projetos_mobile %}
                             {% for projeto in projetos_mobile %}
                             <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
-                                <img src="{% static '/Assets/images/projects/mobile/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
+                                <img src="{% static '/assets/images/projects/mobile/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
                                 <div class="carousel-caption">
                                     <h5>{{ projeto.nome }}</h5>
                                     <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
