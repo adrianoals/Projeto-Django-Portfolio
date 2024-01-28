@@ -7,7 +7,7 @@ Este é um projeto de portfólio desenvolvido com Django, HTML, CSS, Bootstrap e
 - **Python Django**: Usado para o backend do site.
 - **HTML/CSS/Bootstrap**: Usados para a criação e estilização das páginas web.
 - **JavaScript**: Usado para adicionar interatividade às páginas web.
-- **Banco de Dados**: Integração com banco de dados para armazenar e recuperar informações.
+- **Banco de Dados PostgreSQL:**: Integração com banco de dados para armazenar e recuperar informações sobre os projetos
 
 ## Recursos
 
@@ -26,6 +26,3 @@ Este é um projeto de portfólio desenvolvido com Django, HTML, CSS, Bootstrap e
 
 Contribuições são bem-vindas! Por favor, leia as diretrizes de contribuição antes de enviar uma solicitação de pull.
 
-## Licença
-
-Este projeto está licenciado sob a licença MIT.
