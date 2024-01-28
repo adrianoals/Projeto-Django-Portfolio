@@ -7,16 +7,12 @@
             </div>
             <div class="col-md-5">
                 <h1 class="featurette-heading fw-normal lh-1 custom-center text-md-start">Meus Projetos</h1>
-                <h5 class="mt-5 custom-center text-md-start font_subtitle">Lorem ipsum dolor sit</h5>
+                <h5 class="mt-5 custom-center text-md-start font_subtitle">Bem-vindo ao espaço dedicado aos meus projetos!
+                </h5>
                 <p class="custom-center text-md-start font_text">
-                    Sou um parágrafo. Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam quia autem nulla deleniti fugit a! Inventore, quibusdam ad! Ipsum esse saepe adipisci hic? Obcaecati quo consequatur, ab ipsam modi dolore!
+                    Abaixo, você encontrará meus projetos, organizados em três categorias: WEB / API, Automações e Mobile. Sinta-se à vontade para clicar no botão e verificar o projeto em funcionamento ou ser redirecionado ao meu GitHub, onde os projetos estarão devidamente documentados. Sempre que possível, estarei atualizando meus projetos, então não esqueça de retornar ao meu site para verificar as novas atualizações.
                 </p>
-                {% comment %} <div class="button-container ms-2 me-2 mb-5 d-flex flex-nowrap justify-content-center">
-                    <a href="#web-api"><button class="btn mt-4 me-3 btn-yellow font_subtitle text-dark">Web/API</button></a>
-                    <a href="#automacoes"><button class="btn mt-4 me-3 btn-red font_subtitle text-dark">Automações</button></a>
-                    <a href="#mobile"><button class="btn mt-4 me-3 btn-blue font_subtitle text-dark">Mobile</button></a>
-                </div> {% endcomment %}
+
                 <font size="5">
                     <div class="button-container ms-2 me-2 mb-5 d-flex flex-nowrap justify-content-center">
                         <a href="#web-api"><button class="btn mt-4 me-3 btn-yellow font_subtitle text-dark">Web/API</button></a>
@@ -39,10 +35,11 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <h2 class="featurette-heading fw-normal lh-1 custom-center text-md-start">Web / API</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut eaque architecto adipisci tenetur excepturi ab libero voluptates molestias, voluptatum beatae iste eos praesentium quisquam, placeat pariatur, provident nemo. Aliquid?</p>
+                    <p>Os projetos WEB geralmente envolvem a criação de sites utilizando tanto tecnologias front-end quanto back-end. Esses projetos podem variar desde sites estáticos simples até aplicações web complexas com bancos de dados e funcionalidades avançadas. Por outro lado, os projetos de API (Interface de Programação de Aplicações) envolvem a criação de endpoints que permitem a comunicação entre diferentes sistemas de software. As APIs são fundamentais para permitir que diferentes aplicações interajam entre si de maneira eficiente e segura.
+                    </p>
                 </div>
     
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="carousel slide" id="carouselWebApi" data-bs-wrap="true" data-bs-ride="carousel">    
                         <!-- itens do carrossel aqui -->
                         <div class="carousel-inner">
@@ -51,8 +48,8 @@
                             <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
                                 <img src="{% static '/assets/images/projects/webapi/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
                                 <div class="carousel-caption">
-                                    <h5>{{ projeto.nome }}</h5>
-                                    <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
+                                    <h5 class="">{{ projeto.nome }}</h5>
+                                    <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle border-dark">CLIQUE AQUI</button></a>
                                 </div>
                             </div>
                             {% endfor %}
@@ -81,10 +78,11 @@
             <div class="row align-items-center">
                 <div class="col-md-6 order-md-2">
                     <h2 class="featurette-heading fw-normal lh-1 custom-center text-md-start">Automações / Scraping</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut eaque architecto adipisci tenetur excepturi ab libero voluptates molestias, voluptatum beatae iste eos praesentium quisquam, placeat pariatur, provident nemo. Aliquid?</p>
+                    <p>Os projetos de Automação envolvem a criação de scripts ou programas que automatizam tarefas repetitivas, economizando tempo e reduzindo a possibilidade de erros humanos. Essas automações podem variar desde simples scripts de shell até complexos fluxos de trabalho de automação de processos robóticos. Por outro lado, os projetos de Scraping, também conhecidos como Web Scraping, envolvem a extração de dados de sites. Isso é feito através da simulação de interações humanas com a página web ou diretamente analisando o código HTML da página. Esses projetos são fundamentais quando se deseja obter grandes volumes de dados de sites que não possuem uma API pública ou quando a informação desejada só está disponível através da interface do usuário.
+                    </p>
                 </div>
     
-                <div class="col-md-6 order-md-1">
+                <div class="col-md-4 order-md-1">
                     <div class="carousel slide" id="carouselAutomacoes" data-bs-wrap="true" data-bs-ride="carousel">    
                         <!-- itens do carrossel aqui -->
                         <div class="carousel-inner">
@@ -93,8 +91,8 @@
                             <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
                                 <img src="{% static '/assets/images/projects/automacoes/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
                                 <div class="carousel-caption">
-                                    <h5>{{ projeto.nome }}</h5>
-                                    <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
+                                    <h5 class="">{{ projeto.nome }}</h5>
+                                    <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle border-dark">CLIQUE AQUI</button></a>
                                 </div>
                             </div>
                             {% endfor %}
@@ -123,10 +121,10 @@
             <div class="row align-items-center">
                 <div class="col-md-6 order-md-1">
                     <h2 class="featurette-heading fw-normal lh-1 custom-center text-md-start">Mobile</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut eaque architecto adipisci tenetur excepturi ab libero voluptates molestias, voluptatum beatae iste eos praesentium quisquam, placeat pariatur, provident nemo. Aliquid?</p>
+                    <p>Os projetos mobile geralmente envolvem a criação de aplicativos para dispositivos móveis utilizando uma variedade de tecnologias e plataformas. Esses projetos podem variar desde aplicativos simples de uma única página até aplicativos complexos com múltiplas funcionalidades e integrações de banco de dados. </p>
                 </div>
     
-                <div class="col-md-6 order-md-2">
+                <div class="col-md-4 order-md-2">
                     <div class="carousel slide" id="carouselMobile" data-bs-wrap="true" data-bs-ride="carousel">    
                         <!-- itens do carrossel aqui -->
                         <div class="carousel-inner">
@@ -135,8 +133,8 @@
                             <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
                                 <img src="{% static '/assets/images/projects/mobile/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
                                 <div class="carousel-caption">
-                                    <h5>{{ projeto.nome }}</h5>
-                                    <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle">Clique Aqui!</button></a>
+                                    <h5 class="">{{ projeto.nome }}</h5>
+                                    <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle border-dark">CLIQUE AQUI</button></a>
                                 </div>
                             </div>
                             {% endfor %}

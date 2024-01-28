@@ -117,12 +117,12 @@ h1 {
     /* width: 90%; */
     /* height: 70vh; */
 
-    width: 630px;
-    height: 450px;
+    width: 530px;
+    height: 250px;
     
     
     display: block;
-    border: 1px solid #000; /* Cor e largura da borda desejada */
+    border: 4px solid #000; /* Cor e largura da borda desejada */
     border-radius: 10px; /* Opcional: Adiciona bordas arredondadas */
     margin: 0 0 0;
 }
