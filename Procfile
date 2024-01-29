@@ -1,1 +1,1 @@
-web: gunicorn 'Projeto-Django-Portfolio.wsgi'
+web: python manage.py runserver 0.0.0.0:$POR
