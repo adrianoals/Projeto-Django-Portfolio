@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #         'NAME': 'postgres', 
 #         'USER': 'postgres', 
-#         'PASSWORD':(os.getenv('PASSWORD_SUPABASE')) ,
+#         'PASSWORD':(os.getenv('PASSWORD_SUPABASE')),
 #         'HOST': 'db.bvglwutqajhppjkeqsux.supabase.co', 
 #         'PORT': '5432'
 #     }
@@ -107,7 +107,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'railway', 
         'USER': 'postgres', 
-        'PASSWORD': '35dA5gFFGCeEEEb*G35*3A66dEDfFE35' ,
+        # 'PASSWORD': '35dA5gFFGCeEEEb*G35*3A66dEDfFE35' ,
+        'PASSWORD':(os.getenv('PASSWORD_RAILWAY')),
         'HOST': 'viaduct.proxy.rlwy.net', 
         'PORT': '37529'
     }
