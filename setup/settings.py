@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 # SQL LITE
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # # Postgrees SUPABASE
 # DATABASES = {
@@ -102,17 +102,17 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 # }
 
 # Postgrees Railway
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'railway', 
-        'USER': 'postgres', 
-        # 'PASSWORD': '35dA5gFFGCeEEEb*G35*3A66dEDfFE35' ,
-        'PASSWORD':(os.getenv('PASSWORD_RAILWAY')),
-        'HOST': 'viaduct.proxy.rlwy.net', 
-        'PORT': '37529'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'railway', 
+#         'USER': 'postgres', 
+#         # 'PASSWORD': '35dA5gFFGCeEEEb*G35*3A66dEDfFE35' ,
+#         'PASSWORD':(os.getenv('PASSWORD_RAILWAY')),
+#         'HOST': 'viaduct.proxy.rlwy.net', 
+#         'PORT': '37529'
+#     }
+# }
 
 
 # Password validation
