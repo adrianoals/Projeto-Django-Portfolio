@@ -47,7 +47,11 @@
                             {% if projetos_web_api %}
                             {% for projeto in projetos_web_api %}
                             <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
-                                <img src="{% static '/assets/images/projects/webapi/'%}{{ projeto.imagem}}" class="img-fluid" alt="fotoprojeto">
+                                {% if projeto.imagem == "" or projeto.imagem == null %}
+	                                <img src="{% static 'assets/images/principal/not-found.png' %}" class="img-fluid" alt="fotoprojeto">
+                                {% else %}
+                                     <img src="{{ projeto.imagem.url }}" class="img-fluid" alt="fotoprojeto">
+                                {% endif %}
                                 <div class="carousel-caption">
                                     <h5 class="">{{ projeto.nome }}</h5>
                                     <a href="{{ projeto.link }}"><button class="btn mt-4 me-3 btn-warning font_subtitle border-dark">CLIQUE AQUI</button></a>
